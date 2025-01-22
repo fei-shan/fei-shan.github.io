@@ -1,88 +1,222 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-    <title>Fei Shan</title>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Fei Shan's personal website">
     <meta name="keywords" content="">
     <meta name="author" content="Fei Shan">
     <meta name="robots" content="noindex">
 
-    <link rel="stylesheet" href="static/styles.css">
+    <title>Fei Shan</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            font-size: 105%;
+        }
+
+        h1 {
+            color: #2c3e50;
+            margin: 5px;
+        }
+
+        h2 {
+            color: #34495e;
+            border-bottom: 2px solid #ecf0f1;
+            padding-bottom: 0.5rem;
+        }
+
+        h3 {
+            color: #34495e;
+        }
+
+        p {
+            margin: 10px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        a {
+            text-decoration: none;
+            color: #3498db;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        section {
+            margin-bottom: 2rem;
+            text-align: justify;
+        }
+
+        .publication,
+        .project,
+        .blog-post {
+            margin-bottom: .5rem;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 2rem;
+            color: #7f8c8d;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .button:hover {
+            background-color: #2980b9;
+        }
+
+        .quote {
+            font-style: italic;
+            color: #7f8c8d;
+            border-left: 3px solid #3498db;
+            padding-left: 1rem;
+            margin: 1rem 0;
+        }
+
+        .faint {
+            font-size: 90%;
+            font-weight: lighter;
+            color: #7f828d;
+        }
+
+        .personal {
+            background-color: #f8f9fa;
+            border-radius: 5px;
+            padding: 1rem;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
 </head>
 
 <body>
-    <div id="main">
-        <div id="title">
-            <h1>
-                Fei Shan
-            </h1>
-            <address>
-                <span class="icon fai">&#x2709</span> <a href="mailto:fshan@vt.edu" target="_blank">fshan@vt.edu</a>
-            </address>
-        </div>
-        <div id="content">
-            <div class="slide-container">
-                <div id="academic" class="slide">
-                    <div class="page">
-                        <h3>About</h3>
-                        <p>
-                            I'm a Ph.D. student in Computer Science at Virginia Tech advised by <a href="https://crowd.cs.vt.edu/kurt-luther/" target="_blank">Dr. Kurt Luther</a>. I study computer (AI) supported human information practice and collaboration over historical documents, which is under the human-computer interaction (HCI) research category.
-                        </p>
-                        <p>
-                            I also work as a Graduate Assistant for the IT division at Virginia Tech <a href="https://dcarea.vt.edu/discovery/research-center-arlington.html" target="_blank">Research Center</a> in Arlington, VA. Prior to my Ph.D. study, I received graduate degrees in computer science from <a href="https://omscs.gatech.edu/" target="_blank">Georgia Institute of Technology</a> and the <a href="https://www.cs.umd.edu/" target="_blank">University of Maryland</a>.
-                        </p>
-                        <h3>
-                            Research Interests
-                        </h3>
-                        <p>
-                            I'm interested in exploring (1) common themes of human information behavior with technologies across different fields, and (2) the diversity of it resulting from different perspectives and expertise. I develop systems guided by such knowledge.
-                        <p>
-                        <h3>
-                            Publications
-                        </h3>
-                        <p>
-                            Community-driven AI support for genealogy research.
-                            <a class="ref" href="https://cscw.acm.org/2023/index.php/workshops/"
-                                target="_blank">CSCW 2023 Workshop</a><br>
-                            <span class="faint"><span class="author">Fei Shan</span> and Kurt Luther</span>
-                        </p>
-                        <p>
-                            Decidio: A pilot implementation and user study of a novel decision-support system.
-                            <a class="ref" href="https://link.springer.com/chapter/10.1007/978-3-030-48641-9_14"
-                                target="_blank">GDN 2020</a><br>
-                            <span class="faint">Kevin Hogan, <span class="author">Fei Shan</span>, Monikka Ravichandran,
-                                Aadesh Bagmar, James Wang, Adam Sarsony, and James Purtilo</span>
-                        </p>
-                    </div>
-                </div>
-                <div id="personal" class="slide">
-                    <div class="page">
-                        <h3>Personal Interest</h3>
-                        <ul>
-                            <li>
-                                The <a href="https://plato.stanford.edu/entries/science-mechanisms/" target="_blank">new
-                                    mechanical philosophy</a>
-                            </li>
-                            <li>
-                                <a href="https://plato.stanford.edu/entries/nietzsche/#Pers" target="_blank">Perspectivism</a>
-                            </li>
-                            <!-- <li>
-                                Artifacts that last longer than human lifespan.
-                            </li> -->
-                        </ul>
-                    </div>
-                </div>
+    <header>
+        <h1>Fei Shan</h1>
+        Ph.D. Student in Computer Science at Virginia Tech.
+        <p class="faint">Email: <a href="mailto:fshan@vt.edu" target="_blank">fshan@vt.edu</a></p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#publications">Publications</a></li>
+            <li><a href="#personal">Personal</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="about">
+            <h2>About Me</h2>
+            <p>
+                I'm a Ph.D. student in Computer Science at Virginia Tech advised by <a
+                    href="https://crowd.cs.vt.edu/kurt-luther/" target="_blank">Dr. Kurt Luther</a>. I study computer
+                and AI supported human information practice, sensemaking, and collaboration over historical documents,
+                which is under the human-computer interaction (HCI) research category.
+            </p>
+            <p>I'm interested in exploring (1) common themes of human sensemaking with technologies across
+                different fields, and (2) the diversity of it resulting from different perspectives, expertise, and
+                other factors. I design and develop systems guided by such knowledge.
+            </p>
+            <p>
+                I also work as a graduate assistant for the Division of IT at <a
+                    href="https://dcarea.vt.edu/discovery/research-center-arlington.html" target="_blank">Virginia Tech
+                    Research Center</a> in Arlington, VA. Prior to my Ph.D. study, I received graduate degrees in
+                computer science from <a href="https://omscs.gatech.edu/" target="_blank">Georgia Institute of
+                    Technology</a> and the <a href="https://www.cs.umd.edu/grad/ms-catalog/" target="_blank">University
+                    of Maryland</a>. My couresework involves a wide range of topics, including deep learning, computer
+                vision, natural language processing, computer networks and security, and cognitive science.
+            </p>
+        </section>
+
+        <section id="education">
+            <h2>Education</h2>
+            <ul>
+                <li>Ph.D. in Computer Science, Virginia Polytechnic Institute and State University<span class="faint">
+                        -Present</span></li>
+                <li>M.S. in Computer Science, Gerogia Institute of Technology</li>
+                <li>M.S. in Computer Science, University of Maryland</li>
+            </ul>
+        </section>
+
+        <section id="publications">
+            <h2>Publications</h2>
+            <div class="publication">
+                <p>
+                    Reexamining Technological Support for Genealogy Research, Collaboration, and Education. <em><a
+                            class="ref" href="https://arxiv.org/abs/2411.07869" target="_blank">CSCW
+                            2025</a></em><br>
+                    <span class="faint"><strong>Fei Shan</strong>, Kurt Luther</span>
+                </p>
             </div>
-        </div>
-        <nav>
-            <button id="nav_btn_academic">Academic</button> |
-            <button id="nav_btn_personal">Personal</button>
-        </nav>
-    </div>
-    
-    <script defer src="static/scripts.js" type="text/javascript"></script>
+            <div class="publication">
+                <p>
+                    Community-driven AI support for genealogy research. <em><a class="ref"
+                            href="https://sites.google.com/nd.edu/community-ai-cscw-2023/home" target="_blank">CSCW 2023
+                            Workshop</a></em><br>
+                    <span class="faint"><strong>Fei Shan</strong>, Kurt Luther</span>
+                </p>
+            </div>
+            <div class="publication">
+                <p>Decidio: A pilot implementation and user study of a novel decision-support
+                    system. <em><a class="ref" href="https://link.springer.com/chapter/10.1007/978-3-030-48641-9_14"
+                            target="_blank">GDN 2020</a></em><br>
+                    <span class="faint">Kevin Hogan, <strong>Fei Shan</strong>, Monikka Ravichandran,
+                        Aadesh Bagmar, James Wang, Adam Sarsony, James Purtilo</span>
+                </p>
+            </div>
+        </section>
+
+        <section id="personal" class="personal">
+            <h2>Personal</h2>
+            <h3>Interesting Reads</h3>
+            <ul>
+                <li><a href="https://plato.stanford.edu/entries/science-mechanisms/" target="_blank">The New
+                        Mechanical Philosophy</a></li>
+                <li><a href="https://plato.stanford.edu/entries/nietzsche/#Pers" target="_blank">Perspectivism</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p class="faint">&copy; 2025 Fei Shan. All rights reserved.</p>
+    </footer>
 </body>
 
 </html>
